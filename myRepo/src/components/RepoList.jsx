@@ -1,7 +1,5 @@
-import React from "react";
 import { Flex, Avatar, Box, Text, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import RepoDetails from "../pages/RepoDetails";
 
 const RepoList = ({
   items,
