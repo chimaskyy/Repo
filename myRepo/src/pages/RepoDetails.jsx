@@ -1,15 +1,14 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Flex, Box, Text, Button, Spinner, Avatar } from "@chakra-ui/react";
+import { Spinner } from "@chakra-ui/react";
 import { format } from "date-fns";
 // import StarRateIcon from "@mui/icons-material/StarRate";
-import CircularProgress from "@mui/material/CircularProgress";
+// import CircularProgress from "@mui/material/CircularProgress";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import StarRateOutlinedIcon from "@mui/icons-material/StarRateOutlined";
 
-const RepoDetails = ( {searching}) => {
+const RepoDetails = () => {
   const { id } = useParams(); // Get the id parameter from the URL
   const [repo, setRepo] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -20,6 +19,7 @@ const RepoDetails = ( {searching}) => {
       .get(`https://api.github.com/repositories/${id}`)
       .then((response) => {
         setRepo(response.data);
+        console.log(response.data);
         setLoading(false);
       })
       .catch((error) => {
@@ -38,15 +38,15 @@ const RepoDetails = ( {searching}) => {
 
   return (
     <div
-      className={`min-h-screen bg-gradient-to-r from-slate-300 to-slate-500 bg-opacity-25 p-6`}
+      className={`min-h-screen bg-gradient-to-r from-purple-500 to-pink-500 bg-opacity-25 p-6`}
     >
       {/* <div className="bg-cover bg-gradient-to-r from-slate-300 to-slate-500 bg-opacity-25"> */}
       <div className="mt-24">
-        <h2 className="text-2xl color-yellow font-bold flex justify-center item-center">
+        <h2 className="text-2xl font-bold flex justify-center item-center">
           Viewing {repo.name} details
         </h2>
       </div>
-      <article className="bg-white rounded-lg shadow m-24 mt-4">
+      <article className="container bg-white rounded-lg bg-auto grid shadow w-64 flex justify-center item-center m-16 mt-6 md:w-auto xl:w-auto">
         <article className="flex items-center m-6 pt-3 justify-start">
           <img
             src={repo.owner.avatar_url}

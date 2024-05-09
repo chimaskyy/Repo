@@ -5,10 +5,10 @@ import { Spinner } from "@chakra-ui/react";
 import RepoList from "../components/RepoList";
 // import Error from "./FourOhFour";
 
-const Repos = () => {
+const UserRepos = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState("chimaskyy");
+  const [user, setUser] = useState("");
   const [search, setSearch] = useState("");
   const [searching, setSearching] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,6 +21,10 @@ const Repos = () => {
   }, [currentPage, user]);
 
   function searchRepos() {
+    if (user === "") {
+      setLoading(false);
+        return;
+    }
     const url = `https://api.github.com/users/${user}/repos`;
     axios
       .get(url)
@@ -91,4 +95,4 @@ const Repos = () => {
   );
 };
 
-export default Repos;
+export default UserRepos;
