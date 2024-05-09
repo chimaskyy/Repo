@@ -1,6 +1,4 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@chakra-ui/react";
 
 const Home = () => {
   return (
@@ -26,13 +24,13 @@ const Home = () => {
             </button>
           </Link>
         </div>
-        <div className="flex items-center justify-center mb-6 mt-8">
-          <p className="text-m mt-4 text-white">
+        {/* <div className="flex items-center justify-center mb-6 mt-8"> */}
+          {/* <p className="text-m mt-4 text-white"> */}
             {/* eslint-disable-next-line react/no-unescaped-entities */}
-            Don't have an account?{" "}
-            <a href="https://github.com/join">Sign up for GitHub</a>
-          </p>
-        </div>
+            {/* Don't have an account?{" "} */}
+            {/* <a href="https://github.com/join">Sign up for GitHub</a> */}
+          {/* </p> */}
+        {/* </div> */}
       </div>
     </div>
   );

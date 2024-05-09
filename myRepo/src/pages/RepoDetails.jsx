@@ -67,7 +67,7 @@ const RepoDetails = () => {
           </div>
           <div className="flex flex-wrap items-center justify-between">
             <a
-              className="underline hover:bg-gray-600 hover:text-white"
+              className="underline hover:bg-gradient-to-r from-purple-500 to-pink-500 hover:text-white"
               href={repo.html_url}
               target="_blank"
               rel="noreferror"
@@ -85,7 +85,7 @@ const RepoDetails = () => {
           </div>
           <div className="flex flex-wrap item-center mt-5 justify-between">
             {repo.language && (
-              <p className="bg-gray-600 opacity-75 text-white py-1 px-2 rounded-lg shadow test-xs">
+              <p className="bg-gradient-to-r from-purple-500 to-pink-500 opacity-75 text-white py-1 px-2 rounded-lg shadow test-xs">
                 {repo.language}
               </p>
             )}

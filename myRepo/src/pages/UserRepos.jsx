@@ -18,6 +18,7 @@ const UserRepos = () => {
   useEffect(() => {
     setLoading(true);
     searchRepos();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage, user]);
 
   function searchRepos() {
@@ -39,6 +40,7 @@ const UserRepos = () => {
       });
   }
 
+  // eslint-disable-next-line no-unused-vars
   const handleSubmit = (e) => {
     e.preventDefault();
     setCurrentPage(1);
@@ -63,22 +65,26 @@ const UserRepos = () => {
       }`}
     >
       <div className="flex items-center justify-center mb-6">
-        <form className="form">
-          <input
-            className="border border-slate-300 shadow-sm rounded mt-5 text-start px-2 py-1 md:py-2"
-            placeholder="Search User"
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
-          />
-          {/* <button className="bg-blue-300" onClick={handleSubmit}>
+        <div className="mr-11">
+          <form className="form">
+            <input
+              className="border border-slate-300 shadow-sm rounded mt-5 text-start px-2 py-1 md:py-2"
+              placeholder="Search User"
+              value={user}
+              onChange={(e) => setUser(e.target.value)}
+            />
+            {/* <button className="bg-blue-300" onClick={handleSubmit}>
             Search
           </button> */}
-        </form>
-        <input
-          className="border border-slate-300 shadow-sm rounded mt-5 text-start px-2 py-1 w-1/2 md:py-2 md:w-1/3 lg:w-1/4"
-          placeholder="Search Repo by name"
-          onChange={searchHandler}
-        />
+          </form>
+        </div>
+        <div>
+          <input
+            className="border border-slate-300 shadow-sm rounded mt-5 text-start px-2 py-1 md:py-2"
+            placeholder="Search Repo by name"
+            onChange={searchHandler}
+          />
+        </div>
       </div>
       {loading ? (
         <Spinner />
