@@ -1,30 +1,36 @@
-[Repo App](https://patient-tracker-three.vercel.app/)
+[repo-view](https://repo-view.vercel.app/)
 
- PatientTrackerApp aims to enhance the efficiency and effectiveness of healthcare delivery by providing a centralized platform for managing patient information and interactions.
- As a patient coming into the hospital, ypu can create and edit your account and fill in your basic information.
- As a Medic in the hospital you can create and edit your account.
- As a Medic your have access to patients profile to create or edit a medical record.
+ # GitHub Repo Viewer
 
- ## Technologies Used
- * Backend: Supabase and Flask
- * Frontend: React JS
- * Styling: Tailwind
+GitHub Repo Viewer is a simple web application that allows users to search for GitHub projects of a user by their username. It provides a user-friendly interface to explore repositories and their details.
 
- ## Running Backend Locally
- Follow this steps to run the Backend locally:
- * Clone this repository to your local machine.
- * Navigate to the repository directory patient-tracker-app
- * Navigate to the directory ```flask_server```
- * Create a virtual environment
- * Install necessary dependencies using ```pip install -r requirements.txt```.
- * Navigate back to the repository directory patient-tracker-app
-Start the Flask server by running ```python3 -m flask_server.my_app```
+## Features
 
- ## Running Frontend Locally
- Follow this steps to run the Backend locally:
-* Clone this repository to your local machine if you haven't done that
-Navigate to the frontend directory ```client```
-Install dependencies using ```npm install```.
-After the installation, start the client server by running  ```npm run dev```.
+- **Search by User**: Enter a GitHub username to view repositories associated with that user.
+- **Search by Repository Name**: Enter a repository name to search for repositories with matching names.
+- **Pagination**: View repositories in paginated format, allowing easy navigation through multiple pages.
+- **Responsive Design**: The application is designed to work seamlessly across different devices and screen sizes.
 
-## Contributing
+## Technologies Used
+
+- **React**: Built using React library for the frontend user interface.
+- **Axios**: Used Axios for making HTTP requests to the GitHub API.
+- **React Router**: Implemented React Router for client-side routing.
+
+## Getting Started
+
+To run the application locally, follow these steps:
+
+1. Clone the repository:
+```git clone https://github.com/chimaskyy/Repo.git```
+
+2. Navigate to the project directory:
+```cd Repo```
+```cd myRepo```
+
+3. Install dependencies:
+```npm install```
+
+4. Start the development server:
+```npm run dev```
+
